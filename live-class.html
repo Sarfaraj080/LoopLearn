@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Class Room - LoopLearn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menuDropdown").classList.toggle("hidden");
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+  <style>
+    body.dark {
+      background-color: #1f2937;
+      color: #f9fafb;
+    }
+    .dark .bg-white { background-color: #1f2937; }
+    .dark .text-gray-800 { color: #f9fafb; }
+    .dark .text-gray-600 { color: #d1d5db; }
+    .dark .bg-gray-50 { background-color: #374151; }
+    .dark .bg-blue-600:hover { background-color: #2563eb; }
+    .dark .menu-icon { color: #ffffff; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+
+  <!-- ✅ Header -->
+  <header class="bg-blue-600 text-white p-4 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img src="logo.png" alt="LoopLearn Logo" class="w-10 h-10 object-contain" />
+        <h1 class="text-2xl font-bold">LoopLearn</h1>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- ✅ Dashboard Button -->
+        <a href="dashboard.html" class="bg-white text-blue-600 px-4 py-1 rounded shadow hover:bg-gray-100 transition text-sm">Dashboard</a>
+
+        <!-- ✅ 3 Dot Menu -->
+        <div class="relative">
+          <button onclick="toggleMenu()" class="text-white text-2xl menu-icon">⋮</button>
+          <div id="menuDropdown" class="absolute right-0 mt-2 w-40 bg-white rounded shadow-lg text-sm text-gray-700 hidden z-50">
+            <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
+            <button onclick="toggleDarkMode()" class="w-full text-left px-4 py-2 hover:bg-gray-100">Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Main Section -->
+  <main class="max-w-4xl mx-auto mt-10 p-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">🎥 Live Class Room</h2>
+
+    <!-- 🧑‍🏫 Host a Class -->
+    <section class="bg-white p-6 rounded shadow mb-10 border border-blue-200">
+      <h3 class="text-xl font-bold mb-4">🧑‍🏫 Host a Live Class</h3>
+      <form id="hostForm" class="flex flex-col sm:flex-row gap-4">
+        <input type="text" id="classTitle" placeholder="Topic (e.g., Python Loops)" required class="flex-1 border px-4 py-2 rounded bg-gray-50">
+        <input type="text" id="classHostName" placeholder="Your Name" required class="flex-1 border px-4 py-2 rounded bg-gray-50">
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Host Now</button>
+      </form>
+    </section>
+
+    <!-- 👥 Available Live Classes -->
+    <section id="liveClasses" class="space-y-4">
+      <!-- Live classes will appear here -->
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("hostForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById("classTitle").value.trim();
+      const host = document.getElementById("classHostName").value.trim();
+
+      const roomId = title.toLowerCase().replace(/\s+/g, "-") + "-" + Date.now();
+      const roomUrl = `https://meet.jit.si/${roomId}`;
+
+      const newCard = document.createElement("div");
+      newCard.className = "bg-white p-6 rounded shadow border hover:shadow-md transition";
+      newCard.innerHTML = `
+        <h4 class="text-xl font-bold mb-1">${title}</h4>
+        <p class="text-sm text-gray-500 mb-3">Hosted by: ${host}</p>
+        <a href="${roomUrl}" target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Join Now</a>
+      `;
+
+      document.getElementById("liveClasses").appendChild(newCard);
+
+      document.getElementById("classTitle").value = "";
+      document.getElementById("classHostName").value = "";
+    });
+  </script>
+</body>
+</html>

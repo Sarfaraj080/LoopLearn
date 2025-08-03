@@ -14,7 +14,23 @@
   <!-- 🔷 Header -->
   <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex justify-between items-center shadow">
     <h1 class="text-xl font-bold">🎓 LoopLearn | Doubt Room</h1>
-    <span class="text-sm opacity-90">🔍 Topic: JavaScript Array Help</span>
+    <div class="flex items-center gap-4">
+        <!-- ✅ Dashboard Button -->
+        <a href="dashboard.html" class="bg-white text-blue-600 px-4 py-1 rounded shadow hover:bg-gray-100 transition text-sm">Dashboard</a>
+
+      <!-- ✅ 3 Dot Menu -->
+        <div class="relative">
+          <button onclick="toggleMenu()" class="text-white text-2xl menu-icon">⋮</button>
+          <div id="menuDropdown" class="absolute right-0 mt-2 w-40 bg-white rounded shadow-lg text-sm text-gray-700 hidden z-50">
+            <a href="help.html" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            <a href="about" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
+             <a href="Dark Mode" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
+            <button onclick="toggleDarkMode()" class="w-full text-left px-4 py-2 hover:bg-gray-100">Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
   </header>
 
   <!-- 💬 Chat Section -->

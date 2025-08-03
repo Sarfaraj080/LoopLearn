@@ -6,95 +6,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen text-gray-800">
+<body class="bg-gray-100 min-h-screen text-gray-800 font-sans">
 
   <!-- Header -->
   <header class="bg-blue-600 text-white p-4 shadow flex justify-between items-center">
     <h1 class="text-2xl font-bold">📊 LoopLearn Leaderboard</h1>
-    <a href="dashboard.html" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200">Back to Dashboard</a>
+    <a href="dashboard.html" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200 transition">← Back to Dashboard</a>
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-5xl mx-auto mt-10 px-4">
+  <main class="max-w-6xl mx-auto mt-10 px-4 space-y-10">
+<body class="bg-gray-200 text-gray-800 min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-7xl border-[6px] border-blue-600 rounded-2xl shadow-2xl bg-white">
+  
+    <!-- ⬇️ Your entire page content goes inside this div ⬇️ -->
+    
+    <!-- HEADER -->
+    <!-- MAIN -->
+    <!-- FOOTER or LAST UPDATED -->
 
-    <!-- Leaderboard Tabs -->
-    <div class="grid md:grid-cols-2 gap-8">
+    <!-- ⬆️ End of your page content ⬆️ -->
 
-      <!-- 🔹 Host Review Leaderboard -->
-      <section class="bg-white rounded shadow p-6">
-        <h2 class="text-xl font-bold text-blue-600 mb-4">🏅 Top Hosts (by Reviews)</h2>
-        <table class="w-full text-left table-auto">
+  </div>
+</body>
+
+    <!-- Host Leaderboard -->
+    <section class="bg-white rounded-lg shadow-lg p-6">
+      <h2 class="text-xl font-bold text-blue-700 mb-6">🏅 Top Hosts (by Reviews)</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto text-sm">
           <thead>
-            <tr class="bg-blue-100">
+            <tr class="bg-blue-100 text-blue-800 font-semibold">
               <th class="px-4 py-2">Rank</th>
-              <th class="px-4 py-2">Name</th>
-              <th class="px-4 py-2">Sessions Hosted</th>
-              <th class="px-4 py-2">Total Reviews</th>
+              <th class="px-4 py-2">Host</th>
+              <th class="px-4 py-2">Sessions</th>
+              <th class="px-4 py-2">Reviews</th>
+              <th class="px-4 py-2">Badge</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 font-bold">1</td>
-              <td class="px-4 py-2">Aarav Sen</td>
-              <td class="px-4 py-2">28</td>
-              <td class="px-4 py-2">163</td>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-bold">1</td>
+              <td class="px-4 py-3 flex items-center gap-2">
+                <span class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">AS</span>
+                Pikachu
+              </td>
+              <td class="px-4 py-3">28</td>
+              <td class="px-4 py-3">163</td>
+              <td class="px-4 py-3">🥇</td>
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 font-bold">2</td>
-              <td class="px-4 py-2">Megha Kapoor</td>
-              <td class="px-4 py-2">22</td>
-              <td class="px-4 py-2">140</td>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-bold">2</td>
+              <td class="px-4 py-3 flex items-center gap-2">
+                <span class="bg-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">MK</span>
+                Greninja
+              </td>
+              <td class="px-4 py-3">22</td>
+              <td class="px-4 py-3">140</td>
+              <td class="px-4 py-3">🥈</td>
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 font-bold">3</td>
-              <td class="px-4 py-2">Rohan Das</td>
-              <td class="px-4 py-2">19</td>
-              <td class="px-4 py-2">122</td>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-bold">3</td>
+              <td class="px-4 py-3 flex items-center gap-2">
+                <span class="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">RD</span>
+                Charizard
+              </td>
+              <td class="px-4 py-3">19</td>
+              <td class="px-4 py-3">122</td>
+              <td class="px-4 py-3">🥉</td>
             </tr>
           </tbody>
         </table>
-      </section>
+      </div>
+    </section>
 
-      <!-- 🔸 Doubt Solving Leaderboard -->
-      <section class="bg-white rounded shadow p-6">
-        <h2 class="text-xl font-bold text-green-600 mb-4">🧠 Top Solvers (Doubt Room)</h2>
-        <table class="w-full text-left table-auto">
+    <!-- Solver Leaderboard -->
+    <section class="bg-white rounded-lg shadow-lg p-6">
+      <h2 class="text-xl font-bold text-green-700 mb-6">🧠 Top Solvers (Doubt Room)</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto text-sm">
           <thead>
-            <tr class="bg-green-100">
+            <tr class="bg-green-100 text-green-800 font-semibold">
               <th class="px-4 py-2">Rank</th>
-              <th class="px-4 py-2">Name</th>
+              <th class="px-4 py-2">Solver</th>
               <th class="px-4 py-2">Doubts Solved</th>
-              <th class="px-4 py-2">Correct Answers</th>
+              <th class="px-4 py-2">Correct</th>
+              <th class="px-4 py-2">Badge</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 font-bold">1</td>
-              <td class="px-4 py-2">Priya Sharma</td>
-              <td class="px-4 py-2">42</td>
-              <td class="px-4 py-2">39</td>
+            <tr class="hover:bg-green-50 transition">
+              <td class="px-4 py-3 font-bold">1</td>
+              <td class="px-4 py-3 flex items-center gap-2">
+                <span class="bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">PS</span>
+                Chigga
+              </td>
+              <td class="px-4 py-3">42</td>
+              <td class="px-4 py-3">39</td>
+              <td class="px-4 py-3">🥇</td>
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 font-bold">2</td>
-              <td class="px-4 py-2">Siddharth Rao</td>
-              <td class="px-4 py-2">37</td>
-              <td class="px-4 py-2">35</td>
+            <tr class="hover:bg-green-50 transition">
+              <td class="px-4 py-3 font-bold">2</td>
+              <td class="px-4 py-3 flex items-center gap-2">
+                <span class="bg-yellow-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">SR</span>
+                Wiggha
+              </td>
+              <td class="px-4 py-3">37</td>
+              <td class="px-4 py-3">35</td>
+              <td class="px-4 py-3">🥈</td>
             </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 font-bold">3</td>
-              <td class="px-4 py-2">Tanvi Jain</td>
-              <td class="px-4 py-2">35</td>
-              <td class="px-4 py-2">33</td>
+            <tr class="hover:bg-green-50 transition">
+              <td class="px-4 py-3 font-bold">3</td>
+              <td class="px-4 py-3 flex items-center gap-2">
+                <span class="bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold">TJ</span>
+                Nigga 
+              </td>
+              <td class="px-4 py-3">35</td>
+              <td class="px-4 py-3">33</td>
+              <td class="px-4 py-3">🥉</td>
             </tr>
           </tbody>
         </table>
-      </section>
-
-    </div>
+      </div>
+    </section>
 
     <!-- Last Updated -->
-    <p class="text-sm text-gray-500 text-center mt-10">📅 Last updated: July 29, 2025</p>
+    <p class="text-center text-gray-500 text-sm mt-6">📅 Last updated: Janril 69, 2050</p>
   </main>
-
 </body>
 </html>

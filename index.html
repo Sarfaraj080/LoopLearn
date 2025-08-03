@@ -27,15 +27,6 @@
       z-index: 10;
     }
 
-    @keyframes fade-in {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .animate-fade-in {
-      animation: fade-in 1s ease-out;
-    }
-
     .dark {
       background-color: #1f2937;
       color: #f9fafb;
@@ -83,11 +74,14 @@
   <!-- ✅ Header -->
   <header class="bg-blue-600 text-white p-4 fixed top-0 left-0 w-full shadow z-50">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">LoopLearn</h1>
+      <div class="flex items-center gap-2">
+  <img src="logo.png.png" alt="LoopLearn Logo" class="w-10 h-10 object-contain " />
+  <h1 class="text-2xl font-bold bg-blue-100">LoopLearn</h1>
+</div>
       <div class="flex items-center gap-4 relative">
         <a href="login.html#login" class="bg-white text-blue-600 px-4 py-2 rounded 
            hover:bg-gray-200 hover:shadow-lg hover:scale-105 active:scale-95 
-           transition-all duration-300 hover:animate-pulse">Login</a>
+           transition-all duration-300">Login</a>
 
         <!-- 3-dot menu -->
         <div class="relative">
@@ -107,11 +101,11 @@
 
   <!-- ✅ Hero Section -->
   <section class="text-center py-20 bg-white section-border">
-    <h1 class="text-5xl font-bold mb-4 text-blue-600 animate-fade-in">LoopLearn</h1>
+    <h1 class="text-5xl font-bold mb-4 text-blue-600">LoopLearn</h1>
     <p class="description-text text-xl mb-6 transition-opacity duration-700">Learn, Teach, and Earn — All in One Place</p>
-    <a href="login.html#signup" class="bg-blue-600 text-white px-6 py-3 rounded 
-       hover:bg-blue-700 hover:shadow-xl hover:scale-110 active:scale-95 
-       transition-all duration-300 animate-fade-in hover:animate-pulse">Join Now</a>
+    <a href="login.html#signup" class="inline-block bg-blue-600 text-white px-6 py-3 rounded 
+   hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:scale-95 
+   transition-all duration-300">Join Now</a>
   </section>
 
   <!-- ✅ Features Section -->
@@ -132,7 +126,7 @@
 
   <!-- ✅ Testimonials -->
   <section class="bg-white p-10 text-center section-border">
-    <h2 class="text-2xl font-bold mb-6 animate-fade-in">💬 What Students Say</h2>
+    <h2 class="text-2xl font-bold mb-6">💬 What Students Say</h2>
     <blockquote class="italic testimonial-text opacity-80 hover:opacity-100 transition-opacity duration-500">
       "I finally understood DSA thanks to LoopLearn!" — Nagini, 2nd Year
     </blockquote>
@@ -141,11 +135,11 @@
   <!-- ✅ Call to Action -->
   <section class="text-center py-10 bg-blue-600 text-white section-border">
     <h2 class="text-3xl font-bold mb-4 hover:scale-105 transition-transform duration-300">Join 1000+ Learners Now</h2>
-    <a href="login.html#signup" class="bg-white text-blue-600 px-6 py-3 rounded 
-       hover:bg-gray-200 hover:shadow-lg hover:scale-105 active:scale-95 
-       transition-all duration-300 hover:animate-pulse">Start Learning</a>
+    <a href="login.html#signup" class="inline-block bg-white text-blue-600 px-6 py-3 rounded 
+   hover:bg-gray-200 hover:shadow-lg hover:scale-105 active:scale-95 
+   transition-all duration-300">Start Learning</a>
+
   </section>
 
 </body>
 </html>
-hhash
